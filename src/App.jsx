@@ -6,22 +6,24 @@ import Seller from './components/Seller';
 import Books from './components/Books';
 import Demand from './components/Demand';
 import Footer from './components/Footer';
+import Carosal from './components/Carosal';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Router>
+    <div className=''>
+      <Router>
+      <Navbar></Navbar>
+      <Carosal></Carosal>
+      <Category></Category>
+      <Books></Books>
+      <Demand></Demand>
       <Routes>
-        <Route path='/' element={<Navbar/>}/>
-        <Route path='/' element={<Category/>}/>
-        <Route path='/' element={<Books/>}/>
-        <Route path='/' element={<Demand/>}/>
         <Route path='/seller' element={<Seller/>}/>
-        <Route path='/' element={<Footer/>}/>
-        
       </Routes>
     </Router>
+    </div>
   )
 }
 
