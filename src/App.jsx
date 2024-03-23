@@ -31,6 +31,8 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Dashboard/>}/>
+        <Route path='/' element={<Category />} />
+        <Route path='/genre/:genre' element={<Genre />} />
         <Route path='/seller' element={<Seller/>}/>
         <Route path='/view' element={<Viwe/>}/>
       </Routes>
