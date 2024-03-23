@@ -3,17 +3,13 @@ import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div className="d-flex overflow-x-scroll" style={{scrollbarWidth:'none'}}>
-      <div className="row justify-content-center">
-        <div className="col-md-2">
-          <Link to="/genre/merbooks" className="card-link">
-            <div className="card text-center">
-              <img className="card-img-top" src="//kitabay.com/cdn/shop/files/kapda410.png?v=1709291960" alt="Merchs" />
-              <div className="card-body">
-                <label className="card-title">Merchs</label>
-              </div>
-            </div>
-          </Link>
+
+    <div className='mt-5' style={{ display: 'flex', justifyContent: 'center', gap: '20px', height: '100%', width: '100%', overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+      <Link to="/genre/merbooks"/>
+        <div style={{ backgroundColor: '#f4f1ee' }}>
+          <img style={{ color: '#000000', cursor: 'pointer' }} src="//kitabay.com/cdn/shop/files/kapda410.png?v=1709291960" alt="icon" ></img>
+          <label>Merchs</label>
+
         </div>
         <div className="col-md-2">
           <Link to="/genre/horror" className="card-link">
