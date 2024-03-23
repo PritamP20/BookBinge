@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 const Seller = () => {
 
   // const[name,setName]=useState('');
-// const [email, setEmail] = useState('');
-// const [phone, setPhone] = useState('');
-// const [bookName, setBookName] = useState('');
-// const [lendingDays, setLendingDays] = useState('');
-// const [bookCondition, setBookCondition] = useState('');
-const [showAlert, setShowAlert] = useState(false);
+  // const [email, setEmail] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [bookName, setBookName] = useState('');
+  // const [lendingDays, setLendingDays] = useState('');
+  // const [bookCondition, setBookCondition] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,37 +22,37 @@ const [showAlert, setShowAlert] = useState(false);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);  };
+    console.log(formData);
+  };
 
-    const allFieldsFilled =Object.values(formData).some(value => value.trim() !== '');
+  const allFieldsFilled = Object.values(formData).some(value => value.trim() !== '');
 
-   
-    
 
-    console.log("allFieldsFilled:", allFieldsFilled);
+
+
+  console.log("allFieldsFilled:", allFieldsFilled);
 
 
   // const handleSubmit = (e) => {
-//   e.preventDefault();
-  
-//   if (Object.values(formData).every(value => value.trim() !== '')) {
-//     setShowAlert(true);
-//   }
-// };
+  //   e.preventDefault();
+
+  //   if (Object.values(formData).every(value => value.trim() !== '')) {
+  //     setShowAlert(true);
+  //   }
+  // };
 
 
 
   return (
     <center>
-      <div style={{ backgroundImage: 'url("https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149342941.jpg")', backgroundSize: 'cover', minHeight: '100vh' }}>
-        <div style={{ backgroundColor: 'orange', height: '40px' }}>
-          <h1>Pls enter the details</h1>
-        </div>
+      <div className="container mt-5">        <div style={{ backgroundColor: 'orange', height: '40px' }}>
+        <h1>Pls enter the details</h1>
+      </div>
 
         <div className="container mt-4" style={{ padding: '30px 10px 30px' }}>
           <div className="row">
-            <div className="col-md-6">
-              <label style={{ padding: '12px', fontWeight: 'bold', fontSize: '20px' }}>Name</label>
+            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px' }}>Name</label>
               <input
                 style={{ borderRadius: '10px', width: '50%', height: '60px' }}
                 type="text"
@@ -65,9 +65,11 @@ const [showAlert, setShowAlert] = useState(false);
             </div>
           </div>
 
+
+
           <div className="row mt-3">
-            <div className="col-md-6" style={{ padding: '30px 10px 30px' }}>
-              <label style={{ padding: '12px', fontWeight: 'bold', fontSize: '20px' }}>Phone</label>
+            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center', padding: '30px 10px 30px' }}>
+              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px' }}>Phone</label>
               <input
                 style={{ width: '50%', borderRadius: '10px', height: '60px' }}
                 type="text"
@@ -80,11 +82,12 @@ const [showAlert, setShowAlert] = useState(false);
             </div>
           </div>
 
+
           <div className="row mt-3">
-            <div className="col-md-6" style={{ padding: '30px 10px 30px' }}>
-              <label style={{ padding: '12px', fontWeight: 'bold', fontSize: '20px' }}>Book Name</label>
+            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px', display: 'inline-block' }}>Book Name</label>
               <input
-                style={{ width: '50%', borderRadius: '10px', height: '60px' }}
+                style={{ width: 'calc(50% - 24px)', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Book Name"
@@ -96,10 +99,10 @@ const [showAlert, setShowAlert] = useState(false);
           </div>
 
           <div className="row mt-3">
-            <div className="col-md-6" style={{ padding: '30px 10px 30px' }}>
-              <label style={{ padding: '12px', fontWeight: 'bold', fontSize: '20px' }}>Lending Days</label>
+            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px', display: 'inline-block' }}>Lending Days</label>
               <input
-                style={{ width: '50%', borderRadius: '10px', height: '60px' }}
+                style={{ width: 'calc(50% - 24px)', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Lending Days"
@@ -110,11 +113,12 @@ const [showAlert, setShowAlert] = useState(false);
             </div>
           </div>
 
+
           <div className="row mt-3">
-            <div className="col-md-6" style={{ padding: '30px 10px 30px' }}>
-              <label style={{ padding: '12px', fontWeight: 'bold', fontSize: '20px' }}>Book Condition</label>
+            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px', display: 'inline-block' }}>Book Condition</label>
               <input
-                style={{ width: '50%', borderRadius: '10px', height: '60px' }}
+                style={{ borderRadius: '10px', width: '50%', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Book Condition"
@@ -124,6 +128,7 @@ const [showAlert, setShowAlert] = useState(false);
               />
             </div>
           </div>
+
 
           {allFieldsFilled && (
             <div className="row mt-3">
