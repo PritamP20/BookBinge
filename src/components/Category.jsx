@@ -17,7 +17,7 @@ const Category = () => {
           <label>Horror</label>
         </div>
       </Link>
-
+ 
       <Link to="/genre/youngadults">
         <div style={{ backgroundColor: '#f4f1ee' }}>
           <img style={{ color: '#000000', cursor: 'pointer' }} src="//kitabay.com/cdn/shop/files/Young-Adult_7053d8a0-73ba-4c13-9277-5a7f522fff0e.png?v=1708167698" alt="" />

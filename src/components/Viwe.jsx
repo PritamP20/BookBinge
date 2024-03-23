@@ -33,20 +33,6 @@ const Viwe = () => {
         <span><button type="button" class="btn fs-5 btn-info">Info</button></span>
       </div>
     </div>
-
-    // <div className='container'>
-    //     <div className='row'>
-    //         <div className='col-sm border-2 border-danger'>
-    //             coloumn 1
-    //         </div>
-    //         <div className='col border-2 border-danger'>
-    //             coloumn 1
-    //         </div>
-    //         <div className='col border-2 border-danger'>
-    //             coloumn 1
-    //         </div>
-    //     </div>
-    // </div>
   )
 }
 
