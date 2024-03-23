@@ -9,26 +9,32 @@ import Demand from './components/Demand';
 import Footer from './components/Footer';
 import Carosal from './components/Carosal';
 import Genre from './components/Genre'; // 
+import Viwe from './components/Viwe';
 
 function App() {
   const [count, setCount] = useState(0)
+
+  const Dashboard = ()=>{
+    return(
+      <div>
+        <Carosal></Carosal>
+        <Category></Category>
+        <Books></Books>
+        <Demand></Demand>
+    </div>
+    )
+  }
 
   return (
     <div className=''>
       <Router>
       <Navbar></Navbar>
-      <Carosal></Carosal>
-      <Category></Category>
-      <Books></Books>
-      <Demand></Demand>
       <Routes>
-        <Route path='/' element={<Navbar/>}/>
-        <Route path='/' element={<Category/>}/>
-        <Route path='/' element={<Books/>}/>
-        <Route path='/' element={<Demand/>}/>
+        <Route path='/' element={<Dashboard/>}/>
         <Route path='/seller' element={<Seller/>}/>
+        <Route path='/view' element={<Viwe/>}/>
       </Routes>
-      <footer></footer>
+      <Footer></Footer>
     </Router>
     </div>
   )

@@ -38,7 +38,6 @@ const Navbar = () => {
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-fb250b481abfebfc0ce357d559ad3027a1bf901c
     </div>
   </div>
 </nav>

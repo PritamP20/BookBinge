@@ -88,9 +88,9 @@ const Category = () => {
           <img style={{ color: '#000000', cursor: 'pointer' }} src="https://kitabay.com/cdn/shop/files/khopdi.png?v=1707193632" alt="icon" ></img>
           <label>Philosophy</label>
         </div>
+      </Link>
 
       </div>
-    </div>
   )
 }
 
