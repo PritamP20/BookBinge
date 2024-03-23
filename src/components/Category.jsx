@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Category = () => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', height: '100%', width: '100%', overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
+    <div className='mt-5' style={{ display: 'flex', justifyContent: 'center', gap: '20px', height: '100%', width: '100%', overflow: 'hidden', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)' }}>
       <Link to="/genre/merbooks">
         <div style={{ backgroundColor: '#f4f1ee' }}>
           <img style={{ color: '#000000', cursor: 'pointer' }} src="//kitabay.com/cdn/shop/files/kapda410.png?v=1709291960" alt="icon" ></img>
