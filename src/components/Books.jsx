@@ -23,7 +23,8 @@ const Books = () => {
       'disPrice': 100,
       'url':"https://m.media-amazon.com/images/I/61U9jnPOXML.jpg",
       'detail':"When high school student Peter Parker is bitten by a radioactive spider, he is given sensational abilities that allow him to crawl up walls, just like a spider! But when tragedy strikes Peter's Uncle Ben, Peter vows to use those abilities for the good of all mankind as the Amazing Spider-Man!",
-      'colour':'#dc2626'
+      'colour':'#dc2626',
+      'category':''
     },
     {
       'id':2,
