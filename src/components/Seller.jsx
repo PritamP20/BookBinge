@@ -16,7 +16,8 @@ const Seller = () => {
     phone: '',
     bookName: '',
     lendingDays: '',
-    bookCondition: ''
+    bookCondition: '',
+    file: null
   });
 
   const handleInputChange = (e) => {
@@ -25,7 +26,13 @@ const Seller = () => {
     console.log(formData);
   };
 
-  const allFieldsFilled = Object.values(formData).some(value => value.trim() !== '');
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setFormData({ ...formData, file });
+  };
+
+  const allFieldsFilled = Object.values(formData).some(value => typeof value === 'string' && value.trim() !== '');
+
 
 
 
@@ -41,37 +48,38 @@ const Seller = () => {
   //   }
   // };
 
-
-
   return (
     <center>
-      <div className="container mt-5">        <div style={{ backgroundColor: 'orange', height: '40px' }}>
-        <h1>Pls enter the details</h1>
-      </div>
+      <div className="login template d-flex justify-content-center align-items-center 100-w vh-100 bg-primary">
+        <div className='container-lg text-decoration-underline bg-white'>
+        <form>
+          <h1 style={{fontSize:'5rem',padding:'100px'}}>Pls enter the details</h1>
+        
 
-        <div className="container mt-4" style={{ padding: '30px 10px 30px' }}>
-          <div className="row">
-            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
-              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px' }}>Name</label>
-              <input
-                style={{ borderRadius: '10px', width: '50%', height: '60px' }}
-                type="text"
-                className="form-control"
-                placeholder="Enter your Name"
-                value={formData.name}
-                onChange={handleInputChange}
-                name="name"
-              />
+        {/* <div className="row mt-3 ">
+          <div className="col-md-6"> */}
+            <div className="" style={{padding:'40px'}}>
+              <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+                <label className="fw-bold fs-1" style={{padding:'15px'}}>Name</label>
+                <input
+                  style={{ borderRadius: '10px', width: '100%', height: '60px', padding: '12px' }}
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter your Name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  name="name"
+                />
+              </div>
             </div>
-          </div>
 
 
 
-          <div className="row mt-3">
+          <div className="" style={{padding:'40px'}}>
             <div className="col-md-6" style={{ display: 'flex', alignItems: 'center', padding: '30px 10px 30px' }}>
-              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px' }}>Phone</label>
+              <label className="fw-bold fs-1" >Phone</label>
               <input
-                style={{ width: '50%', borderRadius: '10px', height: '60px' }}
+                style={{ width: '100%', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter your Phone Number"
@@ -83,11 +91,11 @@ const Seller = () => {
           </div>
 
 
-          <div className="row mt-3">
+          <div className="" style={{padding:'40px'}}>
             <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
-              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px', display: 'inline-block' }}>Book Name</label>
+              <label className="fw-bold fs-1">Book Name</label>
               <input
-                style={{ width: 'calc(50% - 24px)', borderRadius: '10px', height: '60px' }}
+                style={{ width: '100%', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Book Name"
@@ -98,11 +106,11 @@ const Seller = () => {
             </div>
           </div>
 
-          <div className="row mt-3">
+          <div className="" style={{padding:'40px'}}>
             <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
-              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px', display: 'inline-block' }}>Lending Days</label>
+              <label className="fw-bold fs-1">Lending Days</label>
               <input
-                style={{ width: 'calc(50% - 24px)', borderRadius: '10px', height: '60px' }}
+                style={{ width: '100%', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Lending Days"
@@ -114,17 +122,30 @@ const Seller = () => {
           </div>
 
 
-          <div className="row mt-3">
+          <div className="" style={{padding:'40px'}}>
             <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
-              <label style={{ marginRight: '10px', fontWeight: 'bold', fontSize: '20px', display: 'inline-block' }}>Book Condition</label>
+              <label className="fw-bold fs-1">Book Condition</label>
               <input
-                style={{ borderRadius: '10px', width: '50%', height: '60px' }}
+               style={{width:'100%'}}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Book Condition"
                 value={formData.bookCondition}
                 onChange={handleInputChange}
                 name="bookCondition"
+              />
+            </div>
+          </div>
+
+          <div className="" style={{padding:'40px'}}>
+            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center', padding: '30px 10px 30px' }}>
+              <label className="fw-bold fs-1 p-">Upload a File</label>
+              <input
+              style={{gap:'20px'}}
+                type="file"
+                className="form-control-file"
+                onChange={handleFileChange}
+                accept=".jpg,.jpeg,.png,.pdf"
               />
             </div>
           </div>
@@ -140,7 +161,10 @@ const Seller = () => {
             </div>
           )}
 
-        </div>
+      
+      
+      </form>
+      </div>
       </div>
     </center>
   );

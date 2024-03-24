@@ -20,7 +20,7 @@ const Viwe = () => {
         <div>
             <span className='fs-2 fw-medium text-decoration-underline'>{books.name}</span>
         </div>
-        <div className='d-flex flex-column'>
+        <div className='d-flex flex-column'>2
             <span className='fs-4 fw-semibold'>About:</span>
             <span className='fs-4 '>{books.detail}</span>
         </div>

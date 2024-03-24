@@ -99,7 +99,7 @@ const Books = () => {
 
   const handleClick = (e, url)=>{
     e.preventDefault()
-    // console.log(url)
+    console.log(url)
     navigate('/view', { state: { books: url } });
   }
 
