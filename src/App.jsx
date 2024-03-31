@@ -8,39 +8,44 @@ import Books from './components/Books';
 import Demand from './components/Demand';
 import Footer from './components/Footer';
 import Carosal from './components/Carosal';
-import Genre from './components/Genre'; // 
+import Genre from './components/Genre';
 import Viwe from './components/Viwe';
+import Cart from './components/cart';
 
 function App() {
   const [count, setCount] = useState(0)
 
-  const Dashboard = ()=>{
-    return(
+  const isMainWebsite = location.pathname === '/';
+
+
+  const Dashboard = () => {
+    return (
       <div>
-        <Carosal></Carosal>
-        <Category></Category>
-        <Books></Books>
-        <Demand></Demand>
-    </div>
+        <Carosal />
+        <Category />
+        <Books />
+        <Demand />
+      </div>
     )
   }
 
   return (
     <div className=''>
       <Router>
-      <Navbar></Navbar>
-      <Routes>
-        <Route path='/' element={<Dashboard/>}/>
-        <Route path='/' element={<Category />} />
-        <Route path='/genre/:genre' element={<Genre />} />
-        <Route path='/seller' element={<Seller/>}/>
-        <Route path='/view' element={<Viwe/>}/>
-      </Routes>
-      <Footer></Footer>
-    </Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/category' element={<Category />} />
+          <Route path='/genre/:genre' element={<Genre />} />
+          <Route path='/seller' element={<Seller />} />
+          <Route path='/view' element={<Viwe />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+        {isMainWebsite && <Footer />} 
+        
+      </Router>
     </div>
   )
 }
 
 export default App;
-
