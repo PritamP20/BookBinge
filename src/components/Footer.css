@@ -1,0 +1,85 @@
+.footer {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 20px; /* Padding around the footer */
+  text-align: center; /* Center text */
+}
+
+.footer-heading {
+  margin: 0; /* No margin for the heading */
+  font-size: 1.5rem; /* Heading font size */
+}
+
+.footer-form {
+  display: inline-block; /* Inline-block for the form */
+}
+
+.footer-email {
+  padding: 10px; /* Padding for the email input */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  margin-right: 10px; /* Margin between email input and button */
+}
+
+.footer-button {
+  padding: 10px; /* Padding for the button */
+  background-color: #555; /* Background color for the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  color: #fff; /* White text color */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer-button:hover {
+  background-color: #777; /* Darker background on hover */
+}
+.footer {
+  background-color: #333; /* Dark background */
+  color: white; /* White text */
+  padding: 20px; /* Padding around the footer */
+  text-align: center; /* Center text */
+}
+
+.footer-section {
+  margin-bottom: 20px; /* Margin between sections */
+}
+
+.footer-form {
+  display: inline-block; /* Align form elements inline */
+}
+
+.footer-form input {
+  padding: 10px; /* Padding for input field */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.footer-form button {
+  padding: 10px; /* Padding for button */
+  background-color: #555; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer-form button:hover {
+  background-color: #777; /* Darker background on hover */
+}
+
+.footer-social-icons {
+  display: flex; /* Align icons inline */
+  justify-content: center; /* Center the icons */
+}
+
+.footer-social-link {
+  margin: 0 10px; /* Margin between icons */
+  color: white; /* Icon color */
+  font-size: 24px; /* Icon size */
+  text-decoration: none; /* No underline */
+}
+
+.footer-social-link:hover {
+  color: #f0f0f0; /* Lighten on hover */
+}
+

@@ -2,14 +2,6 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const Seller = () => {
-
-  // const[name,setName]=useState('');
-  // const [email, setEmail] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [bookName, setBookName] = useState('');
-  // const [lendingDays, setLendingDays] = useState('');
-  // const [bookCondition, setBookCondition] = useState('');
-  const [showAlert, setShowAlert] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,13 +9,12 @@ const Seller = () => {
     bookName: '',
     lendingDays: '',
     bookCondition: '',
-    file: null
+    file: null,
   });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   const handleFileChange = (e) => {
@@ -31,142 +22,105 @@ const Seller = () => {
     setFormData({ ...formData, file });
   };
 
-  const allFieldsFilled = Object.values(formData).some(value => typeof value === 'string' && value.trim() !== '');
-
-
-
-
-
-  console.log("allFieldsFilled:", allFieldsFilled);
-
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   if (Object.values(formData).every(value => value.trim() !== '')) {
-  //     setShowAlert(true);
-  //   }
-  // };
-
   return (
-    <center>
-      <div className="login template d-flex justify-content-center align-items-center 100-w vh-100 bg-primary">
-        <div className='container-lg text-decoration-underline bg-white'>
-        <form>
-          <h1 style={{fontSize:'5rem',padding:'100px'}}>Pls enter the details</h1>
-        
+    <div className="vh-100 d-flex justify-content-center align-items-center" style={{ backgroundColor: '#e7926c' }}>
+      <div style={{ width: '50%' }}>
+        {/* Title for the selling page */}
+        <div style={{ textAlign: 'center', padding: '20px' }}>
+          <h1
+            style={{
+              color: 'white',
+              fontFamily: 'Arial, sans-serif',
+              fontSize: 'clamp(24px, 6vw, 80px)', // Flexible font size
+              fontStyle: 'italic', // Italic text
+            }}
+          >
+            Selling Page
+          </h1>
+        </div>
 
-        {/* <div className="row mt-3 ">
-          <div className="col-md-6"> */}
-            <div className="" style={{padding:'40px'}}>
-              <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
-                <label className="fw-bold fs-1" style={{padding:'15px'}}>Name</label>
-                <input
-                  style={{ borderRadius: '10px', width: '100%', height: '60px', padding: '12px' }}
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter your Name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  name="name"
-                />
-              </div>
+        {/* Form for input fields */}
+        <div style={{ backgroundColor: 'white', borderRadius: '10px', padding: '20px' }}>
+          <form>
+            <div style={{ padding: '10px' }}>
+              <label className="fw-bold fs-1">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter your Name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                style={{ borderRadius: '10px', height: '60px' }}
+              />
             </div>
 
-
-
-          <div className="" style={{padding:'40px'}}>
-            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center', padding: '30px 10px 30px' }}>
-              <label className="fw-bold fs-1" >Phone</label>
+            <div style={{ padding: '10px' }}>
+              <label className="fw-bold fs-1">Phone</label>
               <input
-                style={{ width: '100%', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter your Phone Number"
+                name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                name="phone"
+                style={{ borderRadius: '10px', height: '60px' }}
               />
             </div>
-          </div>
 
-
-          <div className="" style={{padding:'40px'}}>
-            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ padding: '10px' }}>
               <label className="fw-bold fs-1">Book Name</label>
               <input
-                style={{ width: '100%', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Book Name"
+                name="bookName"
                 value={formData.bookName}
                 onChange={handleInputChange}
-                name="bookName"
+                style={{ borderRadius: '10px', height: '60px' }}
               />
             </div>
-          </div>
 
-          <div className="" style={{padding:'40px'}}>
-            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ padding: '10px' }}>
               <label className="fw-bold fs-1">Lending Days</label>
               <input
-                style={{ width: '100%', borderRadius: '10px', height: '60px' }}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Lending Days"
+                name="lendingDays"
                 value={formData.lendingDays}
                 onChange={handleInputChange}
-                name="lendingDays"
+                style={{ borderRadius: '10px', height: '60px' }}
               />
             </div>
-          </div>
 
-
-          <div className="" style={{padding:'40px'}}>
-            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ padding: '10px' }}>
               <label className="fw-bold fs-1">Book Condition</label>
               <input
-               style={{width:'100%'}}
                 type="text"
                 className="form-control"
                 placeholder="Enter the Book Condition"
+                name="bookCondition"
                 value={formData.bookCondition}
                 onChange={handleInputChange}
-                name="bookCondition"
+                style={{ borderRadius: '10px', height: '60px' }}
               />
             </div>
-          </div>
 
-          <div className="" style={{padding:'40px'}}>
-            <div className="col-md-6" style={{ display: 'flex', alignItems: 'center', padding: '30px 10px 30px' }}>
-              <label className="fw-bold fs-1 p-">Upload a File</label>
+            <div style={{ padding: '10px' }}>
+              <label className="fw-bold fs-1">Upload a File</label>
               <input
-              style={{gap:'20px'}}
                 type="file"
                 className="form-control-file"
                 onChange={handleFileChange}
                 accept=".jpg,.jpeg,.png,.pdf"
+                style={{ borderRadius: '10px' }} // Adjusted style
               />
             </div>
-          </div>
-
-
-          {allFieldsFilled && (
-            <div className="row mt-3">
-              <div className="col-md-6" style={{ padding: '30px 10px 30px' }}>
-                <div className="alert alert-danger" role="alert" style={{ backgroundColor: 'red', fontWeight: 'bold', fontSize: '35px' }}>
-                  You will be paid 10 rupees
-                </div>
-              </div>
-            </div>
-          )}
-
-      
-      
-      </form>
+          </form>
+        </div>
       </div>
-      </div>
-    </center>
+    </div>
   );
 };
 

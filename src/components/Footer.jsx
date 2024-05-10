@@ -1,54 +1,53 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'; // Correct import for brand icons
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'; // Correct import for solid icons
+import './Footer.css'; // Ensure CSS path is correct
 
-const Footer = () => {
-  return (
-    <div className="container-fluid bg-orange text-black py-5">
-      <div className="row">
-        <div className="col-md-12">
-          <h2 className="fs-3 text-center mb-4">About Book-Binge</h2>
-          <p className="text-center fs-5 fw-bold">
-            A venture of VEDAS CORP, est. 2018 Kitabay.com is a Jaipur based startup promoting sustainable and affordable reading. We are an online bookstore that takes immense pride in curating an extensive collection of original books, both new and pre-loved. Our mission is to make quality literature accessible without burdening the reader's pocket.{' '}
-            <a href="https://kitabay.com/pages/about-us" className="text-decoration-none text-black">Know More</a>
-          </p>
-        </div>
+const Footer = () => (
+  <div>
+    <div className="grid grid-padding page-width" style={{ marginBottom: '0px', borderBottom: '1px solid #C7D7CA' }}>
+      <div className="w-100 border-r-3 p-30" style={{ backgroundColor: '#e7926c' }}>
+        <p style={{ textAlign: 'center', paddingTop: '2.8rem', marginTop: '0px' }}>
+          <img src="images.jpeg" alt="Footer Image" />
+        </p>
+        <h3 style={{ textAlign: 'center', color: 'white' }}>
+          "Indulge in Affordable Reads, Discover New Adventures."
+        </h3>
       </div>
-      <div className="row py-5">
-        <div className="col-md-6">
-          <h2 className="fs-3 text-center">Follow Us</h2>
-          <div className="d-flex justify-content-center">
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="me-3">
-              <FontAwesomeIcon icon={faInstagram} size="3x" />
-            </a>
-            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="me-3">
-              <FontAwesomeIcon icon={faTwitter} size="3x" />
-            </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-              <FontAwesomeIcon icon={faYoutube} size="3x" />
-            </a>
-          </div>
-        </div>
-        <div className="col-md-6">
-          <h2 className="fs-3 text-center">Environmental Impact</h2>
-          <ul className="list-unstyled d-flex justify-content-center fs-5">
-            <li className="me-4">
-              <img src="https://cdn.shopify.com/s/files/1/0302/6927/6291/files/trees.png?v=1697272086" alt="tree" className="img-fluid" style={{ width: '100px' }} />
-              <strong className="d-block text-center">0.0106 Tree(s)</strong>
-            </li>
-            <li className="me-4">
-              <img src="https://cdn.shopify.com/s/files/1/0302/6927/6291/files/co2.png?v=1697272086" alt="co2" className="img-fluid" style={{ width: '100px' }} />
-              <strong className="d-block text-center">1.41Kg of CO2 Emission</strong>
-            </li>
-            <li>
-              <img src="https://cdn.shopify.com/s/files/1/0302/6927/6291/files/water.png?v=1697272086" alt="water" className="img-fluid" style={{ width: '100px' }} />
-              <strong className="d-block text-center">176Liters of Water</strong>
-            </li>
-          </ul>
+    </div>
+
+    <div className="footer"> {/* Footer container */}
+      <div className="footer-section"> {/* Email subscription section */}
+        <h3>Subscribe to our Newsletter</h3>
+        <form className="footer-form"> {/* Form with email input and submit button */}
+          <input
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">
+            <FontAwesomeIcon icon={faArrowRight} /> {/* Arrow icon */}
+          </button>
+        </form>
+      </div>
+
+      <div className="footer-section"> {/* Social media contact section */}
+        <h3>Contact Us on Social Media</h3>
+        <div className="footer-social-icons"> {/* Social media icons */}
+          <a href="https://www.instagram.com/" className="footer-social-link"> {/* Instagram */}
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href="https://twitter.com/" className="footer-social-link"> {/* Twitter */}
+            <FontAwesomeIcon icon={faTwitter} />
+          </a>
+          <a href="https://www.youtube.com/" className="footer-social-link"> {/* YouTube */}
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
         </div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Footer;
