@@ -12,30 +12,25 @@ import Viwe from './components/Viwe';
 import Cart from './components/cart';
 import SignIn from './components/SignIn';
 import Portfolio from './components/Portfolio';
-import logo from './components/logo';
+import Logo from './components/Logo';
 
 function App() {
-  const MainLayout = ({ children }) => (
-    <div>
-      <Navbar />
-      <logo /> {/* Always visible at the top */}
-      {children}
-      <Footer /> {/* Always visible at the bottom */}
-    </div>
-  );
-
+  
   const Dashboard = () => (
     <div>
+      <Navbar></Navbar>
+      <Logo></Logo>
       <Carosal />
       <Category />
       <Books />
       <Demand />
+      <Footer></Footer>
     </div>
   );
 
   return (
     <Router>
-      <MainLayout>
+      
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/category" element={<Category />} />
@@ -46,7 +41,7 @@ function App() {
           <Route path="/signin" element={<SignIn />} /> {/* Sign-in route */}
           <Route path="/portfolio" element={<Portfolio />} /> {/* Portfolio route */}
         </Routes>
-      </MainLayout>
+      
     </Router>
   );
 }

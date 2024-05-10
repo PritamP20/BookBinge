@@ -1,6 +1,6 @@
 import React from 'react';
 
-const logo = () => {
+const Logo = () => {
   return (
     <div style={{ backgroundColor: '#e7926c', padding: '20px', width: '100%' }}>
       <div style={{ textAlign: 'center' }}>
@@ -29,4 +29,4 @@ const logo = () => {
   );
 };
 
-export default logo;
+export default Logo;
